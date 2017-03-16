@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <iccs340-left-sidenav></iccs340-left-sidenav>
+      <div v-if="$store.getters.loggedIn">
+        <iccs340-left-sidenav></iccs340-left-sidenav>
+      </div>
     <router-view></router-view>
   </div>
 </template>
