@@ -1,14 +1,15 @@
 <template>
   <div class="comment">
-    <md-list-item>
-      <md-avatar>
-        <md-icon>account_circle</md-icon>
-      </md-avatar>
-      <div class="md-list-text-container">
+    <!-- <md-list-item> -->
+    <el-form>
+    <el-form-item class="el-form-list-text-container">
+      <div>
         <span>{{ comment.user.email }}</span>
         <span>{{ comment.content }}</span>
       </div>
-    </md-list-item>
+    </el-form-item>
+    </el-form>
+    <!-- </md-list-item> -->
   </div>
 </template>
 
@@ -27,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-  .md-list-item {
+  .el-form-item {
     padding-left: 40px;
   }
 </style>

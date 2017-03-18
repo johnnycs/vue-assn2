@@ -1,13 +1,15 @@
 <template>
   <div class="post">
-    <md-list class="md-triple-line">
+    
       <iccs340-post :post='post'></iccs340-post>
-    </md-list>
-    <md-list>
+
       <div v-for="comment in comments">
         <iccs340-comment :comment='comment'></iccs340-comment>
       </div>
-    </md-list>
+
+    <div>
+      <iccs340-post :post='post'></iccs340-post>
+    </div>
   </div>
 </template>
 
