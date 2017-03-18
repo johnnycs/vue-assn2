@@ -1,23 +1,23 @@
 <template>
   <div class="new-post">
-    <md-list>
-      <md-list-item>
-        <md-avatar class="md-avatar-icon">
+    <!-- <md-list> -->
+      <!-- <md-list-item> -->
+        <!-- <md-avatar class="md-avatar-icon">
           <md-icon>folder</md-icon>
-        </md-avatar>
+        </md-avatar> -->
         <div class="md-list-text-container">
-          <md-input-container>
+          <el-form>
             <label>Add Comment</label>
-            <md-input v-model="comment.content" placeholder=""></md-input>
-          </md-input-container>
+            <el-input v-model="comment.content" placeholder=""></el-input>
+          </el-form>
         </div>
-      </md-list-item>
-      <md-list-item>
+      <!-- </md-list-item> -->
+      <!-- <md-list-item>
         <span style="flex: 1"></span>
         <md-button class="md-raised md-primary" @click.native="createComment">Save</md-button>
         <span style="flex: 1"></span>
-      </md-list-item>
-    </md-list>
+      </md-list-item> -->
+    <!-- </md-list> -->
   </div>
 </template>
 

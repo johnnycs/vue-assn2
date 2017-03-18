@@ -1,35 +1,20 @@
 <template>
-  <div class="sign-in">
-    <md-list class="md-double-line">
-      <md-subheader class="md-inset">New Post</md-subheader>
-      <md-list-item>
-        <md-avatar class="md-avatar-icon">
-          <md-icon>folder</md-icon>
-        </md-avatar>
-        <div class="md-list-text-container">
-          <md-input-container>
-            <label>Email</label>
-            <md-input v-model="email" placeholder=""></md-input>
-          </md-input-container>
-        </div>
-      </md-list-item>
-      <md-list-item>
-        <md-avatar class="md-avatar-icon">
-          <md-icon>folder</md-icon>
-        </md-avatar>
-        <div class="md-list-text-container">
-          <md-input-container>
-            <label>Password</label>
-            <md-input v-model="password" placeholder="" type="password" @keyup.enter.native="login"></md-input>
-          </md-input-container>
-        </div>
-      </md-list-item>
-      <md-list-item>
-        <span style="flex: 1"></span>
-        <md-button class="md-raised md-primary" @click.native="login">Login</md-button>
-        <span style="flex: 1"></span>
-      </md-list-item>
-    </md-list>
+  <div class="sign-in"  style="padding-top:50px;">
+    <el-row type="flex" justify="center">
+      <el-card style="width:55%;hight:60%;">
+        <el-form style="margin-left:30px;margin-right:30px;">
+          <el-form-item label="Name">
+            <el-input v-model="email"></el-input>
+          </el-form-item>
+          <el-form-item label="Password" prop="pass">
+            <el-input type="password" v-model="password" auto-complete="off"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="login">Sign in</el-button>
+          </el-form-item>
+        </el-form>
+      </el-card>
+    </el-row>
   </div>
 </template>
 
@@ -50,6 +35,7 @@ export default {
       console.log('methods.login')
       UsersApi.login(this.email, this.password, function (_response) {
         // NOTE: Posts.index is not yet implemented
+        console.log(this.email)
         router.push({ name: 'Posts.index' })
       })
     }

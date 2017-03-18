@@ -1,12 +1,14 @@
-<template>
+  <template>
   <div class="posts">
-    <md-list class="custom-list md-triple-line">
-      <div v-for="post in posts">
-        <router-link :to="{ name: 'Posts.show', params: {id: post.id } }">
-          <iccs340-post :post='post'></iccs340-post>
-        </router-link>
+      <div class="text item" v-for="post in posts">
+        <el-row type="flex" justify="center">
+          <el-card class="box-card" style="width:55%;hight:60%;margin-bottom:15px;margin-top:10px;">
+            <router-link :to="{ name: 'Posts.show', params: {id: post.id } }">
+              <iccs340-post :post='post'></iccs340-post>
+            </router-link>
+          </el-card>
+        </el-row>
       </div>
-    </md-list>
   </div>
 </template>
 

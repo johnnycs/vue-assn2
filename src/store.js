@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import router from './router'
+import router from './router/index.js'
 
 Vue.use(Vuex)
 
@@ -12,12 +12,12 @@ const state = {
 // mutations are operations that actually mutates the state.
 // never call this directly. these actions are only called by `actions` below.
 const mutations = {
-  login (state) {
+  loginMutation (state) {
     console.log('mutations login')
     state.auth = true
     router.push({ name: 'Posts.index' })
   },
-  logout (state) {
+  logoutMutation (state) {
     console.log('mutations logout')
     state.auth = false
     router.push({ name: 'Users.sign_in' })

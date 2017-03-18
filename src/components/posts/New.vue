@@ -1,19 +1,33 @@
 <template>
   <div class="new-post">
-    <md-list class="md-double-line">
-      <md-subheader class="md-inset">New Post</md-subheader>
-      <md-list-item>
-        <md-avatar class="md-avatar-icon">
+    <!-- <md-list class="md-double-line"> -->
+      <!-- <md-subheader class="md-inset">New Post</md-subheader> -->
+      <!-- <md-list-item> -->
+        <!-- <md-avatar class="md-avatar-icon">
           <md-icon>folder</md-icon>
-        </md-avatar>
-        <div class="md-list-text-container">
-          <md-input-container>
-            <label>Name</label>
-            <md-input v-model="post.name" placeholder=""></md-input>
-          </md-input-container>
+        </md-avatar> -->
+        <div style="margin-top:50px;">
+          <el-row type="flex" justify="center">
+            <el-card style="width:55%;hight:60%;">
+              <el-form style="margin-left:30px;margin-right:30px;">
+                <el-form-item>
+                  <label>Name</label>
+                  <el-input v-model="post.name" placeholder=""></el-input>
+                </el-form-item>
+                <el-form-item>
+                  <label>Content</label>
+                  <el-input v-model="post.content" placeholder=""></el-input>
+                </el-form-item>
+                <el-form-item>
+                  <el-button type="success" @click.native="createPost">Save</el-button>
+                </el-form-item>
+              </el-form>
+            </el-card>
+          </el-row>
+
         </div>
-      </md-list-item>
-      <md-list-item>
+      <!-- </md-list-item> -->
+      <!-- <md-list-item>
         <md-avatar class="md-avatar-icon">
           <md-icon>folder</md-icon>
         </md-avatar>
@@ -28,8 +42,8 @@
         <span style="flex: 1"></span>
         <md-button class="md-raised md-primary" @click.native="createPost">Save</md-button>
         <span style="flex: 1"></span>
-      </md-list-item>
-    </md-list>
+      </md-list-item> -->
+    <!-- </md-list> -->
   </div>
 </template>
 
