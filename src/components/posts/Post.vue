@@ -1,9 +1,17 @@
 <template>
   <div class="posts">
-      <div>
-        <span>{{ post.name }}</span>
-        <p>{{ post.content }}</p>
-      </div>
+    <el-row type="flex" justify="center">
+      <el-card class="box-card">
+        <div slot="header" class="clearfix" style="text-align:left;">
+          <span style="line-height: 36px;">Title: {{ post.name }}</span>
+        </div>
+        <div class="text item">
+          <div>
+            <p> Content: {{ post.content }}</p>
+          </div>
+        </div>
+      </el-card>
+    </el-row>
   </div>
 </template>
 
@@ -22,5 +30,16 @@ export default {
 </script>
 
 <style scoped>
-
+  .box-card {
+    width: 600px;
+    margin: 15px;
+  }
+  .clearfix:before,
+  .clearfix:after {
+      display: table;
+      content: "";
+  }
+  .clearfix:after {
+      clear: both
+  }
 </style>

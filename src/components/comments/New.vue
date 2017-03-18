@@ -1,24 +1,18 @@
 <template>
   <div class="new-post">
-    <!-- <md-list> -->
-      <!-- <md-list-item> -->
-        <!-- <md-avatar class="md-avatar-icon">
-          <md-icon>folder</md-icon>
-        </md-avatar> -->
-        <div class="md-list-text-container">
-          <el-form>
-            <label>Add Comment</label>
-            <el-input v-model="comment.content" placeholder=""></el-input>
-          </el-form>
-        </div>
-      <!-- </md-list-item> -->
-      <!-- <md-list-item>
-        <span style="flex: 1"></span>
-        <md-button class="md-raised md-primary" @click.native="createComment">Save</md-button>
-        <span style="flex: 1"></span>
-      </md-list-item> -->
-    <!-- </md-list> -->
+    <el-row type="flex" justify="center">
+      <el-card style="width:55%;hight:60%;">
+        <el-form>
+          <el-form-item label="Add Comment">
+            <el-input placeholder="" v-model="comment.content"></el-input>
+            <br><br>
+            <el-button type="success" @click="createComment">Submit</el-button>
+          </el-form-item>
+        </el-form>
+      </el-card>
+    </el-row>
   </div>
+
 </template>
 
 <script>

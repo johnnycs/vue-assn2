@@ -1,15 +1,14 @@
 <template>
   <div class="comment">
-    <!-- <md-list-item> -->
     <el-form>
-    <el-form-item class="el-form-list-text-container">
-      <div>
-        <span>{{ comment.user.email }}</span>
-        <span>{{ comment.content }}</span>
-      </div>
-    </el-form-item>
+      <el-form-item class="el-form-list-text-container">
+        <div>
+          <span>{{ comment.user.email }}</span>
+          <span>{{ comment.content }}</span>
+        </div>
+      </el-form-item>
     </el-form>
-    <!-- </md-list-item> -->
+
   </div>
 </template>
 
