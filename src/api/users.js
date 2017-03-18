@@ -12,7 +12,9 @@ export default {
     }
     Vue.$http.post('/users/api_sign_in.json', loginParams)
     .then(function (response) {
+      console.log('before dispatch login')
       store.dispatch('login')
+      console.log('after dispatch login')
       callback(response.data)
     })
     .catch(function (response) {

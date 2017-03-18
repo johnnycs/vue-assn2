@@ -1,5 +1,5 @@
 <template>
-  <div class="side-nav">
+  <div>
     <el-menu class="el-menu-demo" mode="horizontal" @select="handleSelect">
       <el-menu-item index="1">
         <router-link :to="{ name: 'Posts.new' }">

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import SignIn from '@/components/SignIn'
+import SignIn from '@/components/SignIn.vue'
 import PostsIndex from '@/components/posts/Index.vue'
 import PostsShow from '@/components/posts/Show.vue'
 import PostsNew from '@/components/posts/New.vue'

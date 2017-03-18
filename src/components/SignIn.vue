@@ -20,7 +20,7 @@
 
 <script>
 import UsersApi from '../api/users.js'
-import router from '../router'
+import router from '../router/index.js'
 
 export default {
   name: 'sign-in',
