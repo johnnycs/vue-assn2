@@ -12,13 +12,14 @@ const state = {
 // mutations are operations that actually mutates the state.
 // never call this directly. these actions are only called by `actions` below.
 const mutations = {
-  login (state) {
+  loginMutation (state) {
     console.log('mutations login')
     console.log('store.js login')
     state.auth = true
+    console.log(state.auth)
     router.push({ name: 'Posts.index' })
   },
-  logout (state) {
+  logoutMutation (state) {
     console.log('mutations logout')
     console.log('store.js logout')
     state.auth = false
@@ -34,8 +35,8 @@ const mutations = {
 // operations that can be dispatched from other components.
 // example `store.dispatch('login')` will call `login` action and then mutate the state using `mutations.login`
 const actions = {
-  login: ({ commit }) => commit('login'),
-  logout: ({ commit }) => commit('logout')
+  login: ({ commit }) => commit('loginMutation'),
+  logout: ({ commit }) => commit('logoutMutation')
   // fetchPosts: ({ commit }) => commit('fetchPostsMutation')
 }
 

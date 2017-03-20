@@ -1,5 +1,5 @@
 <template>
-  <div class="sign-in"  style="padding-top:50px;">
+  <div class="sign-in"  style="margin-top:165px;">
     <el-row type="flex" justify="center">
       <el-card style="width:55%;hight:60%;">
         <el-form style="margin-left:30px;margin-right:30px;">
@@ -20,7 +20,7 @@
 
 <script>
 import UsersApi from '../api/users.js'
-import router from '../router/index.js'
+// import router from '../router/index.js'
 
 export default {
   name: 'sign-in',
@@ -35,8 +35,8 @@ export default {
       console.log('methods.login')
       UsersApi.login(this.email, this.password, function (_response) {
         // NOTE: Posts.index is not yet implemented
-        console.log(this.email)
-        router.push({ name: 'Posts.index' })
+        // console.log(this.email)
+        // router.push({ name: 'Posts.index' })
       })
     }
   }
